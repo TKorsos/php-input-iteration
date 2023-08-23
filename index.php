@@ -19,23 +19,21 @@
   print '<main class="container-lg py-5">
           <section class="row gy-3 py-3">
             <article class="col p-2">
-              <form method="post" class="d-flex flex-column gap-3">'."\n";
+              <form method="post" class="d-flex flex-column gap-3">' . "\n";
   foreach ($inputname as $input) {
-    print "\t\t\t\t".'<div class="form-floating">'."\n";
+    print "\t\t\t\t" . '<div class="form-floating">' . "\n";
     if ($input === "password") {
-      print "\t\t\t\t\t".'<input type="password" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">'."\n\t\t\t\t\t".'<label for="'.$input.'">'.ucfirst($input).'</label>'."\n";
+      print "\t\t\t\t\t" . '<input type="password" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">' . "\n\t\t\t\t\t" . '<label for="' . $input . '">' . ucfirst($input) . '</label>' . "\n";
     } elseif ($input === "email") {
-      print "\t\t\t\t\t".'<input type="email" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">'."\n\t\t\t\t\t".'<label for="'.$input.'">'.ucfirst($input).'</label>'."\n";
+      print "\t\t\t\t\t" . '<input type="email" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">' . "\n\t\t\t\t\t" . '<label for="' . $input . '">' . ucfirst($input) . '</label>' . "\n";
+    } elseif ($input === "submit") {
+      print "\t\t\t\t\t" . '<input type="submit" class="btn btn-primary" id="' . $input . '" name="' . $input . '">' . "\n";
+    } else {
+      print "\t\t\t\t\t" . '<input type="text" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">' . "\n\t\t\t\t\t" . '<label for="' . $input . '">' . ucfirst($input) . '</label>' . "\n";
     }
-    elseif($input === "submit") {
-      print "\t\t\t\t\t".'<input type="submit" class="btn btn-primary" id="' . $input . '" name="' . $input . '">'."\n";
-    }
-    else {
-      print "\t\t\t\t\t".'<input type="text" class="form-control" id="' . $input . '" name="' . $input . '" placeholder="' . $input . '">'."\n\t\t\t\t\t".'<label for="'.$input.'">'.ucfirst($input).'</label>'."\n";
-    }
-    print "\t\t\t\t".'</div>'."\n";
+    print "\t\t\t\t" . '</div>' . "\n";
   }
-  print "\t\t\t".'</form>
+  print "\t\t\t" . '</form>
       </article>
     </section>
   </main>';
